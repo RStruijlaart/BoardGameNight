@@ -1,0 +1,6 @@
+@BoardGameNight.GraphQL_HostAddress = http://localhost:5173
+
+GET {{BoardGameNight.GraphQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
