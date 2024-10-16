@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoardGameNight.UI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+505126c1c0130bd322544a6e5f4e6c1912463795")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747fc7db43290024a8656948c1fab90c53cba217")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoardGameNight.UI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BoardGameNight.UI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
