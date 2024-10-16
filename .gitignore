@@ -7,8 +7,7 @@
 .env
 
 # Cache and AssemblyInfo
-*.AssemblyInfo.cs
-*.AssemblyInfoInputs.cache
+**/obj/Debug/
 
 # User-specific files
 *.rsuser
