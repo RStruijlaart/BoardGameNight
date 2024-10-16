@@ -3,7 +3,7 @@
 namespace BoardGameNight.Domain.Models
 
 {
-    internal class User
+    public class User
     {
         private readonly int id;
         private string name;

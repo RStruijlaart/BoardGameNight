@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BoardGameNight.Domain.Enumerations
 {
-    enum Gender
+    public enum Gender
     {
         M,
         F,

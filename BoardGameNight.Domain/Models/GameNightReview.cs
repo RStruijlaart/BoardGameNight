@@ -1,6 +1,6 @@
 ﻿namespace BoardGameNight.Domain.Models
 {
-    internal class GameNightReview
+    public class GameNightReview
     {
         private readonly int id;
         private int score;
