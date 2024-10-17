@@ -9,8 +9,14 @@ namespace BoardGameNight.DomainServices
 {
     public interface IBoardgameNightRepository
     {
-        public BoardgameNight getById();
+        public BoardgameNight? getById(int id);
 
         public IEnumerable<BoardgameNight> getAll();
+
+        public void add(BoardgameNight boardgameNight);
+
+        public void update(BoardgameNight boardgameNight);
+
+        public void delete(int id);
     }
 }

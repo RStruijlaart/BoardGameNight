@@ -18,14 +18,36 @@ namespace BoardGameNight.Infrastructure.Repositories
             this.dbContext = dbContext;
         }
 
-        public BoardgameNight getById()
+        public BoardgameNight? getById(int id)
         {
-            throw new NotImplementedException();
+            return dbContext.BoardgameNights.Find(id);
         }
 
         public IEnumerable<BoardgameNight> getAll()
         {
             throw new NotImplementedException();
+        }
+
+        public void add(BoardgameNight boardgameNight)
+        {
+            dbContext.Add(boardgameNight);
+            dbContext.SaveChanges();
+        }
+
+        public void update(BoardgameNight boardgameNight)
+        {
+            dbContext.Update(boardgameNight);
+            dbContext.SaveChanges();
+        }
+
+        public void delete(int id)
+        {
+            var boardgameNightToRemove = dbContext.BoardgameNights.Find(id);
+            if (boardgameNightToRemove != null)
+            {
+                dbContext.BoardgameNights.Remove(boardgameNightToRemove);
+                dbContext.SaveChanges();
+            }
         }
     }
 }

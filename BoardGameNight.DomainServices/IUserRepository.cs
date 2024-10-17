@@ -11,8 +11,14 @@ namespace BoardGameNight.DomainServices
 {
     public interface IUserRepository
     {
-        public User getById(int userId);
+        public User? getById(int id);
 
         public IEnumerable<User> getAll();
+
+        public void add(User user);
+
+        public void update(User user);
+
+        public void delete(int id);
     }
 }

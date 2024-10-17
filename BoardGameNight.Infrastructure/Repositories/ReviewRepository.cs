@@ -17,14 +17,36 @@ namespace BoardGameNight.Infrastructure.Repositories
             this.dbContext = dbContext;
         }
 
-        public GameNightReview getById(int reviewId)
+        public GameNightReview? getById(int id)
         {
-            throw new NotImplementedException();
+            return dbContext.GameNightReviews.Find(id);
         }
 
         public GameNightReview getReviewsByUser(int userId)
         {
             throw new NotImplementedException();
+        }
+
+        public void add(GameNightReview review)
+        {
+            dbContext.Add(review);
+            dbContext.SaveChanges();
+        }
+
+        public void update(GameNightReview review)
+        {
+            dbContext.Update(review);
+            dbContext.SaveChanges();
+        }
+
+        public void delete(int id)
+        {
+            var reviewToRemove = dbContext.GameNightReviews.Find(id);
+            if (reviewToRemove != null)
+            {
+                dbContext.GameNightReviews.Remove(reviewToRemove);
+                dbContext.SaveChanges();
+            }
         }
     }
 }

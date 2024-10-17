@@ -9,8 +9,14 @@ namespace BoardGameNight.DomainServices
 {
     public interface IReviewRepository
     {
-        public GameNightReview getById(int reviewId);
+        public GameNightReview? getById(int id);
 
         public GameNightReview getReviewsByUser(int userId);
+
+        public void add(GameNightReview review);
+
+        public void update(GameNightReview review);
+
+        public void delete(int id);
     }
 }
