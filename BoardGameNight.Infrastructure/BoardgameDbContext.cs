@@ -10,11 +10,16 @@ namespace BoardGameNight.Infrastructure
 {
     public class BoardgameDbContext : DbContext
     {
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Boardgame> Boardgames { get; set; } = null!;
+        public DbSet<BoardgameNight> BoardgameNights { get; set; } = null!;
+        public DbSet<GameNightBoardgame> GameNightBoardgames { get; set; } = null!;
+        public DbSet<GameNightReview> GameNightReviews { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Boardgame");
+            optionsBuilder.UseSqlServer(@"Data Source=RUBENBIRD;Initial Catalog=BoardgameDb;Integrated Security=True;Trust Server Certificate=True");
+
         }
     }
 }
