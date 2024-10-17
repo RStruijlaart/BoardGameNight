@@ -3,27 +3,54 @@
 using BoardGameNight.Domain.Enumerations;
 using BoardGameNight.Domain.Models;
 using BoardGameNight.Infrastructure;
+using BoardGameNight.Infrastructure.Repositories;
+
 using BoardgameDbContext dbContext = new();
 
+UserRepository userRepository = new(dbContext);
+BoardgameRepository boardgameRepository = new(dbContext);
+BoardgameNightRepository boardgameNightRepository = new(dbContext);
+
 //create
-//User user = new()
+User user = new()
+{
+    Name = "user1",
+    Email = "test@test.nl",
+    Street = "straat",
+    City = "city",
+    HouseNumber = 1,
+    Gender = Gender.M
+
+};
+
+Boardgame boardgame = new()
+{
+    Name = "boardgame1",
+    Description = "description",
+    IsAdult = true,
+    PhotoURL = "foto",
+    GameType = BoardGameType.BoardGame,
+    Genre = BoardGameGenre.War
+
+};
+
+//BoardgameNight boardgameNight = new()
 //{
 //    Name = "user1",
 //    Email = "test@test.nl",
-//    Street = "straat1",
-//    City = "city1",
+//    Street = "straat",
+//    City = "city",
 //    HouseNumber = 1,
 //    Gender = Gender.M
 
 //};
 
-//dbContext.Users.Add(user);
+userRepository.add(user);
 
-//dbContext.SaveChanges();
 
 
 //get
-//var users = dbContext.Users;
+//var users = userRepository.getAll();
 
 //foreach (var user in users)
 //{
