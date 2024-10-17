@@ -2,7 +2,7 @@
 {
     public class IdentityUser
     {
-        private string email;
-        private string password;
+        public string email { get; set; } = null!;
+        public string password { get; set; } = null!;
     }
 }

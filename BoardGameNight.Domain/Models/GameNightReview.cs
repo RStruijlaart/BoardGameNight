@@ -2,15 +2,9 @@
 {
     public class GameNightReview
     {
-        private readonly int id;
-        private int score;
-        private string reviewDescription;
+        public int Id { get; init; }
+        public int Score { get; init; }
+        public string ReviewDescription { get; init; } = null!;
 
-        public GameNightReview(int id, int score, string reviewDescription)
-        {
-            this.id = id;
-            this.score = score;
-            this.reviewDescription = reviewDescription;
-        }
     }
 }

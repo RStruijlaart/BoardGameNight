@@ -1,20 +1,19 @@
-﻿namespace BoardGameNight.Domain.Models
-{
-    public class Boardgame
-    {
-        private readonly int id;
-        private string name;
-        private string description;
-        private bool isAdult;
-        private string photoURL;
+﻿namespace BoardGameNight.Domain.Models;
 
-        public Boardgame(int id, string name, string description, bool isAdult, string photoURL)
-        {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.isAdult = isAdult;
-            this.photoURL = photoURL;
-        }
-    }
+using BoardGameNight.Domain.Enumerations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+public class Boardgame
+{
+    public int Id { get; init; }
+    public string Name { get; set; } = null!;
+    public string Description { get; set; } = null!;
+    public bool IsAdult { get; set; }
+    public string PhotoURL { get; set; } = null!;
+
+    [Column(TypeName = "nvarchar(MAX)")]
+    public BoardGameType GameType { get; set; }
+
+    [Column(TypeName = "nvarchar(MAX)")]
+    public BoardGameGenre Genre { get; set; }
 }
