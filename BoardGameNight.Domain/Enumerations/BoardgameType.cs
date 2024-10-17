@@ -10,24 +10,7 @@ namespace BoardGameNight.Domain.Enumerations
     {
         BoardGame,
         CardGame,
-        DiceGame,
-        TileGame,
-        MiniaturesGame,
-        PartyGame,
-        RolePlayingGame,
-        CooperativeGame,
-        DeckBuildingGame,
-        AbstractGame,
-        StrategyGame,
-        WordGame,
-        TriviaGame,
-        LegacyGame,
-        PuzzleGame,
-        DexterityGame,
-        SocialDeductionGame,
-        WarGame,
-        EconomicGame,
-        CollectibleCardGame
+        DiceGame
     }
 
 }
